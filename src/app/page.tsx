@@ -311,11 +311,16 @@ export default function Portfolio() {
                 data-aos-delay={i * 100}
                 className="bg-slate-700 rounded-2xl overflow-hidden hover:scale-105 transition-transform shadow-lg"
               >
-                <Image
-                  src={proj.image}
-                  alt={proj.title}
-                  className="w-full h-48 object-cover"
-                />
+                import Image from "next/image";
+
+<Image
+  src="/images/project1.png"
+  alt="Project"
+  width={600}
+  height={400}
+  className="w-full h-auto rounded-xl"
+/>
+
                 <div className="p-6 text-left">
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {proj.title}
