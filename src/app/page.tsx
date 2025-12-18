@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Image from "next/image";
 import { Home, User, Code2, FolderOpen, Mail } from "lucide-react"; 
 import MouseFollower from "./components/MouseFollower";
 import DownloadResumeButton from "./components/DownloadResumeButton";
@@ -68,7 +69,7 @@ export default function Portfolio() {
         data-aos="fade-up"
         className="text-5xl md:text-6xl font-bold mb-6"
       >
-        Hi, I'm{" "}
+        Hi, I{"'"}m{" "}
         <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
           Neeraj Singh
         </span>
@@ -104,11 +105,16 @@ export default function Portfolio() {
                         border-4 border-cyan-400
                         shadow-[0_0_40px_rgba(34,211,238,0.6)]
                         animate-[float_6s_ease-in-out_infinite]">
-          <img
-            src="/images/profile.jpeg"
-            alt="Neeraj Singh"
-            className="w-full h-full object-cover"
-          />
+          import Image from "next/image";
+
+<Image
+  src="/images/profile.jpeg"
+  alt="Neeraj Singh"
+  width={320}
+  height={320}
+  className="w-full h-full object-cover"
+/>
+
         </div>
 
       </div>
@@ -305,7 +311,7 @@ export default function Portfolio() {
                 data-aos-delay={i * 100}
                 className="bg-slate-700 rounded-2xl overflow-hidden hover:scale-105 transition-transform shadow-lg"
               >
-                <img
+                <Image
                   src={proj.image}
                   alt={proj.title}
                   className="w-full h-48 object-cover"
