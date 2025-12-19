@@ -105,7 +105,6 @@ export default function Portfolio() {
                         border-4 border-cyan-400
                         shadow-[0_0_40px_rgba(34,211,238,0.6)]
                         animate-[float_6s_ease-in-out_infinite]">
-          import Image from "next/image";
 
 <Image
   src="/images/profile.jpeg"
@@ -295,7 +294,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-8">
             {[
               {
-                title: "travel listing website",
+                title: "Travel listing website",
                 desc: "A responsive travel listing website that allows users to explore destinations and travel experiences through a clean, intuitive, and user-friendly interface.using ejs templating, Node.js, and MongoDB.",
                 image: "/images/project1.png",
               },
@@ -311,11 +310,10 @@ export default function Portfolio() {
                 data-aos-delay={i * 100}
                 className="bg-slate-700 rounded-2xl overflow-hidden hover:scale-105 transition-transform shadow-lg"
               >
-                import Image from "next/image";
 
 <Image
-  src="/images/project1.png"
-  alt="Project"
+  src={proj.image}
+  alt={proj.title}
   width={600}
   height={400}
   className="w-full h-auto rounded-xl"
